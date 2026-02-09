@@ -65,7 +65,7 @@ export default function Navbar() {
             FA
           </button>
         </div>
-        <button className="rounded-full border border-white/20 px-5 py-2 text-sm text-white/80 transition hover:border-neon-500/60 hover:text-white">
+        <button className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/80 transition hover:border-neon-500/60 hover:text-white sm:px-5 sm:text-sm whitespace-nowrap">
           {t.common.ctaAccess}
         </button>
       </div>
