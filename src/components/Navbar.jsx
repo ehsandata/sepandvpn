@@ -28,7 +28,9 @@ export default function Navbar() {
           {t.common.navSecurity}
         </NavLink>
         <span className="text-sm text-white/60">{t.common.navTechnology}</span>
-        <span className="text-sm text-white/60">{t.common.navPricing}</span>
+        <a className="text-sm text-white/60 hover:text-white transition" href="/#pricing">
+          {t.common.navPricing}
+        </a>
       </div>
       <div className="flex items-center gap-3 sm:flex-nowrap flex-wrap justify-end">
         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1">

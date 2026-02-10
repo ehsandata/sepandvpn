@@ -273,7 +273,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-ink-900/60 rtl-text" data-aos="fade-up">
+        <section id="pricing" className="relative overflow-hidden bg-ink-900/60 rtl-text" data-aos="fade-up">
           <div className="absolute inset-0 bg-aurora opacity-60" />
           <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 md:grid-cols-[1.1fr_0.9fr]">
             <div className="relative z-10">
