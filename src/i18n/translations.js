@@ -243,7 +243,7 @@ const translations = {
   fa: {
     common: {
       brand: "SepandVPN",
-      brandTagline: "ابر OpenVPN",
+      brandTagline: "OpenVPN Cloud",
       navServers: "سرورها",
       navSecurity: "امنیت",
       navTechnology: "فناوری",
