@@ -30,7 +30,7 @@ export default function Navbar() {
         <span className="text-sm text-white/60">{t.common.navTechnology}</span>
         <span className="text-sm text-white/60">{t.common.navPricing}</span>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 sm:flex-nowrap flex-wrap justify-end">
         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1">
           <button
             className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-xs transition ${
@@ -65,7 +65,7 @@ export default function Navbar() {
             FA
           </button>
         </div>
-        <button className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/80 transition hover:border-neon-500/60 hover:text-white sm:px-5 sm:text-sm whitespace-nowrap">
+        <button className="w-full sm:w-auto rounded-full border border-white/20 px-4 py-2 text-xs text-white/80 transition hover:border-neon-500/60 hover:text-white sm:px-5 sm:text-sm whitespace-nowrap">
           {t.common.ctaAccess}
         </button>
       </div>
