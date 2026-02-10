@@ -12,7 +12,7 @@ const translations = {
       ctaNetwork: "Download App",
       ctaWhitepaper: "Download Whitepaper",
       ctaCaseStudies: "See Case Studies",
-      footerTagline: "Secure OpenVPN services for modern users.",
+      footerTagline: "Secure OpenVPN services for Professional Users.",
       footerPrivacy: "Privacy",
       footerStatus: "Status",
       footerDocs: "Docs",
@@ -27,7 +27,7 @@ const translations = {
     },
     home: {
       badge: "OpenVPN Servers",
-      title: "Fast, secure, and reliable OpenVPN infrastructure for modern users.",
+      title: "Fast, secure, and reliable OpenVPN infrastructure for Professional Users.",
       subtitle:
         "SepandVPN delivers elite OpenVPN clusters engineered for speed, encryption, and always-on reliability. Launch in seconds and stay protected anywhere.",
       highlights: [
@@ -243,7 +243,7 @@ const translations = {
       ctaNetwork: "دانلود اپ",
       ctaWhitepaper: "دانلود وایت‌پیپر",
       ctaCaseStudies: "مطالعه نمونه‌ها",
-      footerTagline: "سرویس‌های امن OpenVPN برای کاربران مدرن.",
+      footerTagline: "سرویس‌های امن OpenVPN برای کاربران حرفه‌ای.",
       footerPrivacy: "حریم خصوصی",
       footerStatus: "وضعیت",
       footerDocs: "اسناد",
@@ -258,7 +258,7 @@ const translations = {
     },
     home: {
       badge: "سرورهای OpenVPN",
-      title: "زیرساخت OpenVPN سریع، امن و قابل اعتماد برای کاربران مدرن.",
+      title: "زیرساخت OpenVPN سریع، امن و قابل اعتماد برای کاربران حرفه‌ای.",
       subtitle:
         "SepandVPN خوشه‌های OpenVPN را برای سرعت، رمزنگاری و پایداری طراحی می‌کند. در چند ثانیه راه‌اندازی شوید و همه‌جا امن بمانید.",
       highlights: [
