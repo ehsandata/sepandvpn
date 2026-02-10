@@ -141,40 +141,7 @@ export default function Security() {
         </div>
       </header>
 
-      <main className="relative z-10">
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
-            <div data-aos="fade-up" className="rtl-text">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/50">{t.security.safeguards.label}</p>
-              <h2 className="mt-4 font-display text-3xl">{t.security.safeguards.title}</h2>
-              <p className="mt-4 text-white/70">{t.security.safeguards.copy}</p>
-              <div className="mt-8 space-y-4">
-                {t.security.safeguards.items.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-white/10 bg-ink-900/70 p-5">
-                    <p className="text-sm font-semibold text-white">{item.title}</p>
-                    <p className="mt-2 text-sm text-white/70">{item.detail}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div data-aos="fade-left" className="rtl-text">
-              <div className="rounded-3xl border border-white/10 bg-ink-900/70 p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">{t.security.complianceLabel}</p>
-                <p className="mt-3 text-sm text-white/70">{t.security.complianceBlock}</p>
-                <div className="mt-5 flex flex-wrap gap-4">
-                  {t.security.compliance.map((item) => (
-                    <div key={item.label} className="rounded-2xl border border-white/10 bg-ink-950/60 px-4 py-3">
-                      <p className="text-sm font-semibold text-white">{item.label}</p>
-                      <p className="text-xs text-white/60">{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </main>
+      <main className="relative z-10" />
 
       <Footer />
     </div>
