@@ -8,6 +8,60 @@ export default function Home() {
   const { t, dir } = useI18n();
   const [routeIndex, setRouteIndex] = useState(0);
   const routes = t.home.liveRoutes || [];
+  const platforms = [
+    {
+      id: "android",
+      label: t.home.securityStack.stack[0],
+      href: "#android",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M7.5 6.5 5.8 3.8a.6.6 0 0 1 1-.6l1.8 2.9a6.7 6.7 0 0 1 6.8 0l1.8-2.9a.6.6 0 0 1 1 .6l-1.7 2.7A6.4 6.4 0 0 1 19 11v7.1a1.4 1.4 0 0 1-2.8 0V13h-1.4v5.1a1.4 1.4 0 0 1-2.8 0V13h-1.4v5.1a1.4 1.4 0 0 1-2.8 0V11a6.4 6.4 0 0 1 2.2-4.5ZM7 9.5a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm10 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "ios",
+      label: t.home.securityStack.stack[1],
+      href: "#ios",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M16.7 13.6c0 2.4 2.1 3.2 2.1 3.2s-1.6 4.6-3.8 4.6c-1 0-1.8-.7-2.8-.7s-2 .7-3 .7c-2.1.1-4.1-4-4.1-7 0-3 1.9-4.6 3.7-4.7 1-.1 2 .8 2.7.8.7 0 1.8-.9 3.1-.8.6 0 2.4.2 3.5 2-2.9 1.7-2.4 5.9.6 6.9Zm-2.5-9c.5-.6.8-1.5.7-2.4-.7 0-1.6.5-2.1 1.1-.5.6-.9 1.5-.7 2.4.8.1 1.6-.4 2.1-1.1Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "macos",
+      label: t.home.securityStack.stack[2],
+      href: "#macos",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M5 6.5A2.5 2.5 0 0 1 7.5 4h9A2.5 2.5 0 0 1 19 6.5v7A2.5 2.5 0 0 1 16.5 16h-3v1.5h2a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h2V16h-3A2.5 2.5 0 0 1 5 13.5v-7Zm2.5-.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-9Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "windows",
+      label: t.home.securityStack.stack[3],
+      href: "#windows",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M3 5.2 11 4v7H3V5.2Zm0 13.6V13h8v7l-8-1.2Zm10-6.6h8v7l-8-1.2v-5.8Zm0-8.8 8-1.2v7.8h-8V3.4Z"
+          />
+        </svg>
+      ),
+    },
+  ];
 
   useEffect(() => {
     if (routes.length <= 1) return;
@@ -48,7 +102,7 @@ export default function Home() {
                 {t.common.ctaTrial}
               </button>
               <Link
-                to="/security"
+                to="/download"
                 className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 transition hover:border-white/60"
               >
                 {t.common.ctaNetwork}
@@ -124,15 +178,18 @@ export default function Home() {
               </p>
               <h2 className="mt-4 font-display text-3xl">{t.home.securityStack.title}</h2>
               <p className="mt-4 text-white/70">{t.home.securityStack.copy}</p>
-              <div className="mt-6 space-y-3">
-                {t.home.securityStack.stack.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-ink-800/60 px-4 py-3 rtl-reverse"
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {platforms.map((platform) => (
+                  <a
+                    key={platform.id}
+                    href={platform.href}
+                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-ink-800/60 px-4 py-3 text-sm text-white/80 transition hover:border-neon-500/60 rtl-reverse"
                   >
-                    <span className="h-2 w-2 rounded-full bg-neon-500" />
-                    <span className="text-sm text-white/80">{item}</span>
-                  </div>
+                    <span className="grid h-9 w-9 place-items-center rounded-full bg-neon-500/10 text-neon-400">
+                      {platform.icon}
+                    </span>
+                    <span>{platform.label}</span>
+                  </a>
                 ))}
               </div>
             </div>

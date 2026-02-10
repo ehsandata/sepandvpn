@@ -10,7 +10,7 @@ export default function App() {
     <div dir={dir} className={dir === "rtl" ? "rtl" : ""}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/security" element={<Security />} />
+        <Route path="/download" element={<Security />} />
       </Routes>
     </div>
   );

@@ -24,7 +24,7 @@ export default function Navbar() {
         <NavLink to="/" className={navLinkClasses}>
           {t.common.navServers}
         </NavLink>
-        <NavLink to="/security" className={navLinkClasses}>
+        <NavLink to="/download" className={navLinkClasses}>
           {t.common.navSecurity}
         </NavLink>
         <span className="text-sm text-white/60">{t.common.navTechnology}</span>
