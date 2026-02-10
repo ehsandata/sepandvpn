@@ -3,7 +3,7 @@ const translations = {
     common: {
       brand: "SepandVPN",
       brandTagline: "OpenVPN Cloud",
-      navServers: "Servers",
+      navServers: "Home",
       navSecurity: "Download",
       navTechnology: "Technology",
       navPricing: "Pricing",
@@ -24,6 +24,7 @@ const translations = {
       responseTime: "We respond within 24 hours with a tailored security plan.",
       perMonth: "/month",
       ms: "ms",
+      serverStatus: "Server Status: Up and Ready to use",
     },
     home: {
       badge: "OpenVPN Servers",
@@ -113,9 +114,10 @@ const translations = {
         plans: [
           {
             name: "Free",
-            price: "Free",
+            price: "Free/1 Week",
             description: "For testing",
             features: ["1 user", "7 days free", "Secure DNS"],
+            showPerMonth: false,
           },
           {
             name: "Monthly",
@@ -123,12 +125,14 @@ const translations = {
             description: "Popular plan",
             features: ["2 users", "Multi Location", "Secure DNS"],
             highlighted: true,
+            showPerMonth: true,
           },
           {
             name: "3 Months",
             price: "100 DKK",
             description: "Best value",
             features: ["5 users", "Multi Location", "Secure DNS"],
+            showPerMonth: true,
           },
         ],
       },
@@ -234,7 +238,7 @@ const translations = {
     common: {
       brand: "SepandVPN",
       brandTagline: "OpenVPN Cloud",
-      navServers: "سرورها",
+      navServers: "خانه",
       navSecurity: "دانلود",
       navTechnology: "فناوری",
       navPricing: "قیمت‌گذاری",
@@ -255,6 +259,7 @@ const translations = {
       responseTime: "حداکثر تا ۲۴ ساعت با برنامه امنیتی پاسخ می‌دهیم.",
       perMonth: "/ماه",
       ms: "میلی‌ثانیه",
+      serverStatus: "وضعیت سرور: آماده و فعال",
     },
     home: {
       badge: "سرورهای OpenVPN",
@@ -344,9 +349,10 @@ const translations = {
         plans: [
           {
             name: "رایگان",
-            price: "رایگان",
+            price: "رایگان/۱ هفته",
             description: "برای تست",
             features: ["۱ کاربر", "۷ روز رایگان", "DNS امن"],
+            showPerMonth: false,
           },
           {
             name: "ماهانه",
@@ -354,12 +360,14 @@ const translations = {
             description: "پلن محبوب",
             features: ["۲ کاربر", "چند موقعیت", "DNS امن"],
             highlighted: true,
+            showPerMonth: true,
           },
           {
             name: "۳ ماهه",
             price: "۱۰۰ کرون",
             description: "به‌صرفه",
             features: ["۵ کاربر", "چند موقعیت", "DNS امن"],
+            showPerMonth: true,
           },
         ],
       },

@@ -309,7 +309,9 @@ export default function Home() {
                 <p className="text-sm text-white/60">{plan.name}</p>
                 <div className="mt-3 flex items-end gap-2">
                   <span className="font-display text-3xl">{plan.price}</span>
-                  <span className="text-xs text-white/60">{t.common.perMonth}</span>
+                  {plan.showPerMonth ? (
+                    <span className="text-xs text-white/60">{t.common.perMonth}</span>
+                  ) : null}
                 </div>
                 <p className="mt-3 text-sm text-white/70">{plan.description}</p>
                 <div className="mt-6 space-y-2 text-sm text-white/70">
