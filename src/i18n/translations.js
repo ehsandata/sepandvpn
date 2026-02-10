@@ -115,7 +115,7 @@ const translations = {
         copy:
           "Start fast, scale instantly. Every plan includes OpenVPN configs, secure onboarding, and live performance analytics.",
         monthly: "Billed monthly",
-        annual: "2 months free annually",
+        annual: "1 month free for 3-month subscription",
         plans: [
           {
             name: "Free",
@@ -356,7 +356,7 @@ const translations = {
         copy:
           "سریع شروع کنید و با رشد تیم مقیاس دهید. همه پلن‌ها شامل کانفیگ OpenVPN و تحلیل عملکرد هستند.",
         monthly: "پرداخت ماهانه",
-        annual: "۲ ماه رایگان با سالانه",
+        annual: "۱ ماه رایگان برای اشتراک ۳ ماهه",
         plans: [
           {
             name: "رایگان",
