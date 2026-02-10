@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/I18nProvider.jsx";
 
 export default function Home() {
-  const { t, dir } = useI18n();
+  const { t, dir, language } = useI18n();
   const [routeIndex, setRouteIndex] = useState(0);
+  const [now, setNow] = useState(new Date());
   const routes = t.home.liveRoutes || [];
   const platforms = [
     {
@@ -70,6 +71,11 @@ export default function Home() {
     }, 2800);
     return () => clearInterval(id);
   }, [routes.length]);
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(id);
+  }, []);
 
   const activeRoute = routes[routeIndex] || {
     route: t.home.liveCard.routeValue,
@@ -194,7 +200,6 @@ export default function Home() {
               </div>
             </div>
             <div className="relative rtl-text rtl-second" data-aos="fade-left">
-              <div className="absolute inset-0 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-white/5" />
               <div className="relative rounded-3xl border border-white/10 bg-ink-900/70 p-8">
                 <p className="text-xs uppercase tracking-[0.25em] text-white/50">
                   {t.home.securityStack.networkLabel}
@@ -230,13 +235,13 @@ export default function Home() {
                     ))}
                   </svg>
                 </div>
-                <div className="mt-6 grid gap-4 md:grid-cols-3">
-                  {t.home.pillars.map((pillar) => (
-                    <div key={pillar.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <p className="text-sm font-semibold text-white">{pillar.title}</p>
-                      <p className="mt-2 text-xs text-white/60">{pillar.description}</p>
-                    </div>
-                  ))}
+                <div className="mt-6 flex flex-wrap items-center gap-3 text-xs text-white/70">
+                  <span className="h-2 w-2 rounded-full bg-neon-500" />
+                  <span>{t.common.serverStatus}</span>
+                  <span className="text-white/40">•</span>
+                  <span className="text-white/60">
+                    {now.toLocaleString(language === "fa" ? "fa-IR" : "en-US")}
+                  </span>
                 </div>
               </div>
             </div>
