@@ -156,11 +156,11 @@ const translations = {
     },
     security: {
       badge: "Download Center",
-      title: "Download SepandVPN for every device.",
+      title: "",
       subtitle:
         "Choose your platform and get connected in minutes with secure OpenVPN profiles.",
       ctaPrimary: "Download App",
-      ctaSecondary: "Back to Servers",
+      ctaSecondary: "Home Page",
       compliance: [
         { label: "Android", text: "Latest build" },
         { label: "iOS", text: "App Store" },
@@ -387,11 +387,11 @@ const translations = {
     },
     security: {
       badge: "مرکز دانلود",
-      title: "SepandVPN را برای همه دستگاه‌ها دانلود کنید.",
+      title: "",
       subtitle:
         "پلتفرم خود را انتخاب کنید و در چند دقیقه وصل شوید.",
       ctaPrimary: "دانلود اپ",
-      ctaSecondary: "بازگشت به سرورها",
+      ctaSecondary: "صفحه اصلی",
       compliance: [
         { label: "اندروید", text: "آخرین نسخه" },
         { label: "iOS", text: "اپ استور" },

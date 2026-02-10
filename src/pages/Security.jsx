@@ -75,9 +75,11 @@ export default function Security() {
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/70">
               {t.security.badge}
             </span>
-            <h1 className="font-display text-4xl leading-tight md:text-5xl">
-              {t.security.title}
-            </h1>
+            {t.security.title ? (
+              <h1 className="font-display text-4xl leading-tight md:text-5xl">
+                {t.security.title}
+              </h1>
+            ) : null}
             <p className="text-white/70 md:text-lg">{t.security.subtitle}</p>
             <div className="flex flex-wrap gap-4">
               <button className="rounded-full bg-neon-500 px-6 py-3 text-sm font-semibold text-ink-950 shadow-glow transition hover:translate-y-[-2px]">
@@ -156,17 +158,7 @@ export default function Security() {
               </div>
             </div>
             <div data-aos="fade-left" className="rtl-text">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/50">{t.security.controls.label}</p>
-              <h3 className="mt-4 font-display text-2xl">{t.security.controls.title}</h3>
-              <div className="mt-6 grid gap-3">
-                {t.security.controls.items.map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-ink-800/60 px-4 py-3 rtl-reverse">
-                    <span className="h-2 w-2 rounded-full bg-neon-500" />
-                    <span className="text-sm text-white/80">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 rounded-3xl border border-white/10 bg-ink-900/70 p-6">
+              <div className="rounded-3xl border border-white/10 bg-ink-900/70 p-6">
                 <p className="text-xs uppercase tracking-[0.3em] text-white/50">{t.security.complianceLabel}</p>
                 <p className="mt-3 text-sm text-white/70">{t.security.complianceBlock}</p>
                 <div className="mt-5 flex flex-wrap gap-4">
@@ -182,31 +174,6 @@ export default function Security() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 pb-24 rtl-text" data-aos="fade-up">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-white/10 p-10">
-            <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">{t.security.action.label}</p>
-                <h2 className="mt-4 font-display text-3xl">{t.security.action.title}</h2>
-                <p className="mt-4 text-white/70">{t.security.action.copy}</p>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {platforms.map((platform) => (
-                  <a
-                    key={`${platform.id}-download`}
-                    href={platform.href}
-                    className="flex items-center gap-3 rounded-2xl border border-white/10 bg-ink-900/70 px-5 py-4 text-sm text-white/80 transition hover:border-neon-500/60 rtl-reverse"
-                  >
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-neon-500/10 text-neon-400">
-                      {platform.icon}
-                    </span>
-                    <span>{platform.label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
